@@ -1,0 +1,147 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-image: linear-gradient(#1C3D89, #CB132B);
+    background-attachment: fixed;
+    color: white;
+    font-family: 'Fredoka', sans-serif;
+    min-height: 100vh;
+}
+
+header{
+    font-size: 1.5rem;
+    padding: 50px;
+}
+
+header, form{
+    min-height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+form input, form button{
+    padding: 0.5rem;
+    font-size: 2rem;
+    border: none;
+    background: white;
+}
+
+form button{
+    color: #CB132B;
+    background: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+form button:hover{
+    background: #CB132B;
+    color: white;
+}
+
+.todo-input{
+    height: 70px;
+    width: 490px;
+}
+
+.todo-button{
+    height: 70px;
+    width: 70px;
+}
+
+.todo-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.todo-list{
+    min-width: 30%;
+    list-style: none;
+}
+
+.todo{
+    margin: 0.5rem;
+    background-color: white;
+    border-radius: 7px;
+    color: rgb(48, 47, 47);
+    font-size: 1.3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+.todo li{
+    flex: 1;
+}
+
+.complete-button, .remove-button{
+    background-color: #c6142d;
+    color: white;
+    border: none;
+    border-radius: 1.5px;
+    padding: 1rem;
+    cursor: pointer;
+    font-size: 1.1rem;
+}
+
+.complete-button{
+    background-color: rgb(42, 185, 42);
+}
+
+.todo-item{
+    padding: 0rem 0.5rem;
+}
+
+.fa-check, .fa-trash{
+    pointer-events: none;
+}
+
+.completed{
+    text-decoration: line-through;
+    opacity: 0.7;
+}
+
+.swiped-out{
+    transform: translateX(100%);
+    opacity: 0;
+}   
+
+select{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    outline: none;
+    border: none;
+    color: #d8203c;
+    width: 10rem;
+    cursor: pointer;
+    padding: 1rem;
+}
+
+.select{
+    margin: 1rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.select::after{
+    content: "\25BC";
+    position: absolute;
+    background: #d8203c;
+    top: 0;
+    right: 0;
+    padding: 0.85rem;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+
+.select:hover::after{
+    background: white;
+    color: #d8203c;
+}
